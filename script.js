@@ -2,11 +2,11 @@
 function funcDelete() {
   let arr = [1, 2, 3, 4, 5, 6];
   let item = document.getElementById("itemDelete").value;
-  if(item == ""){
-      alert("please write number in question One")
-  }else{
-      let x = arr.splice(item, 1);
-      document.getElementById("textArray").innerHTML =
+  if (item == "") {
+    alert("please write number in question One");
+  } else {
+    let x = arr.splice(item, 1);
+    document.getElementById("textArray").innerHTML =
       "New Array list :" + "[ " + arr + " ]";
   }
 }
@@ -19,12 +19,27 @@ document.getElementById("fullArr").innerHTML = "full Array :" + fullArr;
 
 function sortArray() {
   fullArr.sort();
-  document.getElementById("fullArrSort").innerHTML =
-    "Array Sort:" + fullArr;
+  document.getElementById("fullArrSort").innerHTML = "Array Sort:" + fullArr;
 }
 // answer Three question
-let arrT=[1,2,[9,4,[4,7],5],3,1];
+let arrT = [1, 2, [9, 4, [4, 7], 5], 3, 1];
 function flatArray() {
-    let flatArr = arrT.flat();
-    document.getElementById("arrayFlaten").innerHTML ="Array Flat :" + flatArr;
+  let flatArr = arrT.flat();
+  document.getElementById("arrayFlaten").innerHTML = "Array Flat :" + flatArr;
 }
+
+// answer Four question
+let arrFind = [20, 18, 15, 10, 9];
+function funcFindIndex() {
+  let number = document.getElementById("inputIndex").value;
+  let isNumber = element => element == number;
+  let textIndex = document.getElementById("textIndex");
+  let indexItem = arrFind.findIndex(isNumber);
+  if (arrFind.findIndex(isNumber) == -1){
+    indexItem = "This item does not exist";
+  }
+    textIndex.innerHTML = "Index item = " + indexItem;
+}
+
+
+
