@@ -51,20 +51,21 @@
             <p>Array = [a,b,c,d,e,f,g]</p>
             <p>change item : a</p>
             <p>new item : s</p>
-            <button id="btnReplace" onclick="replaceItem()">click index item</button>
-            <p id="newArray">new Array = </p>
+            <button id="btnReplace" onclick="replaceItem()">click change item</button>
+            <p class="mt-3" id="newArray">new Array = </p>
+            <hr>
+            <h5>6- A function to extract numbers from a string </h5>
+            <input style="width: 20%;" type="text" name="array" id="stringItem" placeholder="please write text string and number">
+            <button onclick="numbersInString(document.getElementById('stringItem').value)">click convert string to number</button>
+            <p class="mt-3" id="textNumber">Number = </p>
+
+
         </div>
     </div>
 </body>
 
 <!-- added js file -->
 <script src="script.js">
-
-// let btnReplace = document.getElementById("btnReplace");
-// btnReplace.onclick = replaceItem(items, "a", "aa");
-// document.getElementById("btnReplace").onclick = func("item", "newItem");
-
-
 </script>
 
 </html>

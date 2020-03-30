@@ -35,25 +35,29 @@ function funcFindIndex() {
   let isNumber = element => element == number;
   let textIndex = document.getElementById("textIndex");
   let indexItem = arrFind.findIndex(isNumber);
-  if (arrFind.findIndex(isNumber) == -1){
+  if (arrFind.findIndex(isNumber) == -1) {
     indexItem = "This item does not exist";
   }
-    textIndex.innerHTML = "Index item = " + indexItem;
+  textIndex.innerHTML = "Index item = " + indexItem;
 }
 
 // answer Five question
-    function replaceItem() {
-      let items = ["a", "b", "c", "d", "e", "f", "g"];
-      let item = "a";
-      let newItem = "s";
-      var index = items.indexOf(item);
-      if (index !== -1) {
-        items[index] = newItem;
-      } else {
-        alert("This item does not exist");
-      }
-      let newArray = document.getElementById("newArray");
-      newArray.innerHTML = "new Array = " + items;
-    }
-
- 
+function replaceItem() {
+  let items = ["a", "b", "c", "d", "e", "f", "g"];
+  let item = "a";
+  let newItem = "s";
+  var index = items.indexOf(item);
+  if (index !== -1) {
+    items[index] = newItem;
+  } else {
+    alert("This item does not exist");
+  }
+  let newArray = document.getElementById("newArray");
+  newArray.innerHTML = "new Array = " + items;
+}
+// answer six question
+function numbersInString(string) {
+  string = document.getElementById("stringItem").value;
+  let number = document.getElementById("textNumber");
+  number.innerHTML ="Number = "+ string.match(/\d/g);
+}
