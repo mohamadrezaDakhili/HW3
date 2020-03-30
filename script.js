@@ -41,5 +41,19 @@ function funcFindIndex() {
     textIndex.innerHTML = "Index item = " + indexItem;
 }
 
+// answer Five question
+    function replaceItem() {
+      let items = ["a", "b", "c", "d", "e", "f", "g"];
+      let item = "a";
+      let newItem = "s";
+      var index = items.indexOf(item);
+      if (index !== -1) {
+        items[index] = newItem;
+      } else {
+        alert("This item does not exist");
+      }
+      let newArray = document.getElementById("newArray");
+      newArray.innerHTML = "new Array = " + items;
+    }
 
-
+ 
