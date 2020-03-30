@@ -61,3 +61,10 @@ function numbersInString(string) {
   let number = document.getElementById("textNumber");
   number.innerHTML ="Number = "+ string.match(/\d/g);
 }
+// answer seven question
+function uniqueArray() {
+  let array = [1,1,2,3,4,1,3,5]
+  let textUnique = document.getElementById("textUniqueArray");
+  return textUnique.innerHTML = "unique Array = " + [...new Set(array)];
+}
+
